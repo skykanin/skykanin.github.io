@@ -1,5 +1,5 @@
 {
-  description = "A Nix-flake-based Elm development environment";
+  description = "A Nix-flake-based Clojure development environment";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
@@ -13,7 +13,8 @@
     {
       devShells = forEachSupportedSystem ({ pkgs }: {
         default = pkgs.mkShell {
-          packages = with pkgs.elmPackages; [ elm elm-language-server ];
+          name = "clojure dev shell";
+          packages = with pkgs; [ clojure clj-kondo nodejs ];
         };
       });
     };

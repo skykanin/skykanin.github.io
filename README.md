@@ -1,3 +1,3 @@
-# Elm starter example
+# Clojurescript starter example
 
-Elm starter app
+Clojurescript starter app
